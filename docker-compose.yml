@@ -1,0 +1,18 @@
+services:
+  proxy:
+    image: nginx
+    networks:
+      - frontend
+  app:
+    image: nginx
+    networks:
+      - frontend
+      - backend
+  db:
+    image: nginx
+    networks:
+      - backend
+
+networks:
+  frontend:
+  backend:
